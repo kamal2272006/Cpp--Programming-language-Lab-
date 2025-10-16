@@ -1,0 +1,34 @@
+#include <iostream> 
+#include <cstdlib> 
+using namespace std; 
+int b = 570; 
+ 
+namespace N1  
+{ 
+    int a = 1000; 
+} 
+namespace N2  
+{ 
+    int a = 40; 
+} 
+void fun() 
+{ 
+    int a = 40;  
+    cout << "Fun A : " << a << " " << ::b << endl;   
+} 
+int main()  
+{ 
+    cout << "Roll No: 24B11AI442" << endl; 
+    {                    
+        int a = 40;  // Inner block variable 
+        cout << "Inner A : " << a << endl; 
+    } 
+    cout << "Outer B : " << b << endl; 
+    fun();  // Call to function fun() 
+    cout << "Name space 1 : " << N1::a << endl; 
+    cout << "Name space 2 : " << N2::a << endl; 
+    return 0; 
+} 
+
+
+
