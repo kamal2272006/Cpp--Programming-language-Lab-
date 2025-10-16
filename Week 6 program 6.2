@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+class Number 
+{
+    private:
+        int value;
+    public:
+        Number(int v = 0) : value(v) {}
+    void display() const {
+        cout << "Value: " << value << endl;
+    }
+    friend Number operator-(const Number &n);
+    friend Number operator+(const Number &n1, const Number &n2);
+};
+Number operator-(const Number &n) {
+        return Number(-n.value);
+    }
+Number operator+(const Number &n1, const Number &n2) 
+{
+        return Number(n1.value + n2.value);
+}
+int main() 
+{
+    Number n1(50), n2(5), n3;
+    cout << "Initial values:" << endl;
+    n1.display();
+    n2.display();
+    cout << "\nUnary Operator Overloading (-n1):" << endl;
+    n3 = -n1; 
+    n3.display();
+    cout << "\nBinary Operator Overloading (n1 + n2):" << endl;
+    n3 = n1 + n2; 
+    n3.display();
+    return 0;
+}
