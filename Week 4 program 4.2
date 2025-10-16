@@ -1,0 +1,49 @@
+#include<iostream> 
+#include<cstdlib> 
+using namespace std; 
+class DispDemo 
+{ 
+ public: 
+  void display() 
+  { 
+       cout << "No results found" << endl; 
+  }
+    void display(string msg) 
+  { 
+       cout << "Take a look at this:" << msg << endl; 
+  } 
+  void display(int age) 
+  { 
+       cout << "Age:" <<age << endl; 
+  } 
+  void display(string msg,int age) 
+  { 
+         cout << "Hello" << msg <<"Age:" <<age << endl; 
+  } 
+  int display(int age, int grace) 
+  { 
+         return (age+grace); 
+  } 
+  void show(int c,int a = 40,int b = 50) 
+  { 
+        cout << "A:" << a <<" B:" <<b  << " C:" << c<< endl; 
+  } 
+}; 
+int main() 
+{ 
+        std::cout << "Roll No: 24B11AI442" << std::endl;  
+       DispDemo dd; 
+       dd.display(60); 
+       dd.display(); 
+       dd.display("Welcome to C++ programming"); 
+       dd.display("Kamal",20); 
+       cout << " Result:" << dd.display(50, 15) << endl;
+         //dd.show(); 
+       dd.show(90); 
+       dd.show(500, 400); 
+       return 0; 
+} 
+
+
+
+
